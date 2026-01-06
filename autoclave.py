@@ -31,13 +31,11 @@ def main():
 
     #INPUT DATA
     while True:
-
         print("\n--- MENU INPUT ITEM ---")
         for i, tool in enumerate(TOOLS):
             if tool == "Surgical Stitches":
                 continue
             print(f"{i}. {tool}")
-
         print("\n88. LIHAT ISI GUDANG (CEK INVENTORY)")
         print("99. SELESAI & MULAI HITUNG")
 
