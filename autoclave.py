@@ -41,7 +41,7 @@ def main():
 
         try:
             pilihan = int(input("\nMasukkan Pilihan (Nomor): "))
-            # FITUR CEK INVENTORY
+            #CEK INVENTORY
             if pilihan == 88:
                 print("\n" + "="*40)
                 print("       STATUS INVENTORY SAAT INI       ")
@@ -97,7 +97,6 @@ def main():
             if tool == "Surgical Stitches": continue
             if inventory[tool] >= 20:
                 item_bisa_dimasak.append(tool)
-
         if not item_bisa_dimasak:
             break
         item_yang_dimasak = item_bisa_dimasak[0]
@@ -122,12 +121,11 @@ def main():
     print(f"Total Modal Awal        : {modal_awal_total}")
     print(f"TOTAL STITCHES DIDAPAT  : {total_stit_terkumpul} item")
     print("-" * 50)
-
     print("Sisa Sampah Mati (Tidak cukup untuk autoclave):")
+    
     for tool in TOOLS:
         if tool != "Surgical Stitches" and inventory[tool] > 0:
             print(f"- {tool:<25} : {inventory[tool]}")
-
     print("-" * 50)
     print(f"Verifikasi Rumus Cepat (Total Modal / 9):")
     print(f"{modal_awal_total} / 9 = {modal_awal_total/9:.2f}")
